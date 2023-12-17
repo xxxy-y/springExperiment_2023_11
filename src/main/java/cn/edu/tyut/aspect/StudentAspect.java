@@ -2,6 +2,7 @@ package cn.edu.tyut.aspect;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.Async;
@@ -39,7 +40,7 @@ public class StudentAspect {
     }
 
     @Around("pointCut1()")
-    public Object around(ProceedingJoinPoint proceedingJoinPoint) {
+    public Object around(@NotNull ProceedingJoinPoint proceedingJoinPoint) {
         Object[] args = proceedingJoinPoint.getArgs();
         Object retVal;
         try {
