@@ -19,6 +19,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class StudentServiceImpl implements StudentService {
     private StudentDao studentDao;
 
+    @Autowired
+    public void setStudentDao(StudentDao studentDao) {
+        this.studentDao = studentDao;
+    }
 
     /**
      * >>
