@@ -3,6 +3,7 @@ package cn.edu.tyut.service.impl;
 import cn.edu.tyut.dao.StudentDao;
 import cn.edu.tyut.entity.Student;
 import cn.edu.tyut.service.StudentService;
+import jakarta.annotation.Resource;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Setter
 public class StudentServiceImpl implements StudentService {
     private StudentDao studentDao;
+
 
     /**
      * >>
